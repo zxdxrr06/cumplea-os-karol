@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Karol ❤️</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:
+        radial-gradient(circle at top,#18251f 0%,#080909 45%,#020303 100%);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* =========================
+   ESTRELLAS
+========================= */
+
+.estrellas{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+.estrella{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.7;
+    animation:brillar 3s infinite ease-in-out;
+}
+
+.estrella:nth-child(1){top:10%;left:12%;animation-delay:0s;}
+.estrella:nth-child(2){top:20%;left:80%;animation-delay:1s;}
+.estrella:nth-child(3){top:35%;left:25%;animation-delay:2s;}
+.estrella:nth-child(4){top:45%;left:90%;animation-delay:.5s;}
+.estrella:nth-child(5){top:60%;left:8%;animation-delay:1.5s;}
+.estrella:nth-child(6){top:70%;left:72%;animation-delay:2.5s;}
+.estrella:nth-child(7){top:82%;left:30%;animation-delay:.8s;}
+.estrella:nth-child(8){top:90%;left:85%;animation-delay:1.8s;}
+.estrella:nth-child(9){top:15%;left:45%;animation-delay:2.2s;}
+.estrella:nth-child(10){top:55%;left:50%;animation-delay:.3s;}
+.estrella:nth-child(11){top:75%;left:92%;animation-delay:1.2s;}
+.estrella:nth-child(12){top:30%;left:60%;animation-delay:2.8s;}
+
+@keyframes brillar{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 18px;
+    position:relative;
+    z-index:1;
+}
+
+.contenido{
+    width:100%;
+    max-width:650px;
+    text-align:center;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.portada-corazon{
+    font-size:65px;
+    animation:latido 1.8s infinite;
+    margin-bottom:25px;
+}
+
+@keyframes latido{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+.portada h1{
+    font-size:30px;
+    line-height:1.25;
+    margin-bottom:18px;
+}
+
+.portada p{
+    font-size:18px;
+    color:#d7d7d7;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton{
+    border:none;
+    padding:15px 25px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#315d42,#173b29);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(65,150,100,.25);
+    transition:.3s;
+}
+
+.boton:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 28px rgba(80,190,120,.4);
+}
+
+.boton:active{
+    transform:scale(.96);
+}
+
+/* =========================
+   CARTA
+========================= */
+
+.carta{
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    padding:28px 22px;
+    text-align:left;
+    box-shadow:0 15px 50px rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+}
+
+.carta-titulo{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.carta p{
+    font-size:17px;
+    line-height:1.75;
+    color:#eeeeee;
+    margin-bottom:18px;
+}
+
+.firma{
+    text-align:center;
+    margin-top:30px;
+    font-size:22px;
+    color:#ffffff;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjeta{
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;
+    padding:25px 20px;
+    margin-bottom:22px;
+    box-shadow:0 12px 35px rgba(0,0,0,.3);
+    backdrop-filter:blur(8px);
+}
+
+.tarjeta h2{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.tarjeta p{
+    color:#dddddd;
+    line-height:1.65;
+    font-size:16px;
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.imagen-recuerdo{
+    width:100%;
+    max-height:260px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 18px;
+    border-radius:20px;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.35));
+}
+
+/* =========================
+   COLORES DE KAROL
+========================= */
+
+.colores{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    margin:22px 0 25px;
+    flex-wrap:wrap;
+}
+
+.color{
+    width:115px;
+    text-align:center;
+}
+
+.circulo-color{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    margin:0 auto 12px;
+    border:2px solid rgba(255,255,255,.2);
+    box-shadow:0 0 20px rgba(255,255,255,.08);
+}
+
+.negro .circulo-color{
+    background:#050505;
+}
+
+.verde .circulo-color{
+    background:#176b3a;
+}
+
+.azul .circulo-color{
+    background:#1455a0;
+}
+
+.color strong{
+    display:block;
+    margin-bottom:6px;
+    font-size:17px;
+}
+
+.color span{
+    color:#cfcfcf;
+    font-size:13px;
+    line-height:1.4;
+    display:block;
+}
+
+/* =========================
+   PEQUEÑOS RECUERDOS
+========================= */
+
+.recuerdos-titulo{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.recuerdos-subtitulo{
+    text-align:center;
+    color:#cfcfcf;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+
+.recuerdo{
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:22px;
+    padding:22px 20px;
+    margin-bottom:18px;
+    text-align:left;
+    transition:.3s;
+}
+
+.recuerdo:hover{
+    transform:translateY(-3px);
+    border-color:rgba(90,170,120,.35);
+}
+
+.recuerdo-icono{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.recuerdo h3{
+    font-size:20px;
+    margin-bottom:9px;
+}
+
+.recuerdo p{
+    color:#dddddd;
+    line-height:1.65;
+    font-size:15.5px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    text-align:center;
+    padding:30px 10px 10px;
+}
+
+.final .corazones{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.final h2{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.final p{
+    color:#dddddd;
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA
+========================= */
+
+.aparecer{
+    animation:aparecer 1s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:480px){
+
+    .portada h1{
+        font-size:26px;
+    }
+
+    .portada p{
+        font-size:16px;
+    }
+
+    .carta{
+        padding:23px 18px;
+    }
+
+    .carta p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .tarjeta{
+        padding:22px 17px;
+    }
+
+    .tarjeta h2{
+        font-size:23px;
+    }
+
+    .recuerdos-titulo{
+        font-size:27px;
+    }
+
+    .recuerdo{
+        padding:20px 17px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ESTRELLAS -->
+
+<div class="estrellas">
+
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+
+</div>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<section class="seccion portada aparecer" id="portada">
+
+    <div class="contenido">
+
+        <div class="portada-corazon">
+            ❤️
+        </div>
+
+        <h1>
+            Tengo una pequeña sorpresa para ti, Karol...
+        </h1>
+
+        <p>
+            Hice esto especialmente para ti 🥺❤️
+        </p>
+
+        <button class="boton" onclick="abrirSorpresa()">
+            Abrir sorpresa 🌷
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CARTA
+========================= -->
+
+<section
+    class="seccion aparecer"
+    id="carta"
+    style="display:none;"
+>
+
+    <div class="contenido">
+
+        <div class="carta">
+
+            <h1 class="carta-titulo">
+                Karol ❤️
+            </h1>
+
+            <p>
+                Desde que llegaste a mi vida, te has convertido en una de las personas más importantes para mí.
+            </p>
+
+            <p>
+                Eres una persona única, alguien a quien de verdad estimo muchísimo y a quien amo con todo mi corazón y mi alma. ❤️
+            </p>
+
+            <p>
+                Sé que todavía no hemos tenido la oportunidad de conocernos en persona, pero eso nunca ha impedido que pueda sentir algo tan especial por ti. Lo que siento por ti va mucho más allá de estar frente a frente, porque has logrado ocupar un lugar enorme en mi corazón. 🥺❤️
+            </p>
+
+            <p>
+                Hoy, en tu cumpleaños, quiero desearte toda la felicidad del mundo, mucha suerte, abundancia y que cada uno de tus sueños pueda hacerse realidad. 🌷
+            </p>
+
+            <p>
+                Sé que eres una mujer fuerte, capaz de conseguir todo aquello que se proponga, y una de las cosas que más me gustan de ti es precisamente esa fuerza que tienes para seguir adelante.
+            </p>
+
+            <p>
+                El amor que siento por ti es algo que muchas veces no puedo explicar solamente con palabras. Creo que también se demuestra con acciones, con estar presente, con cuidar, escuchar y apoyar a la persona que amas.
+            </p>
+
+            <p>
+                Y créeme cuando te digo que para mí es muy importante que tú estés bien, que te sientas bien y que sepas que siempre voy a querer apoyarte en todo lo que pueda. ❤️
+            </p>
+
+            <p>
+                Espero que Dios nos permita seguir acercándonos mucho más de lo que estamos actualmente y que podamos construir una relación bonita, llena de cariño, confianza y momentos que podamos recordar juntos.
+            </p>
+
+            <p>
+                No sé exactamente qué nos depare el futuro, pero sí sé algo...
+            </p>
+
+            <p>
+                Te amo muchísimo, mi amor. ❤️
+            </p>
+
+            <p>
+                Feliz cumpleaños, Karol. 🌷🐈‍⬛❤️
+            </p>
+
+            <div class="firma">
+                Con mucho amor,<br>
+                Francisco ❤️
+            </div>
+
+        </div>
+
+        <br>
+
+        <button class="boton" onclick="mostrarCosas()">
+            Hay algo más... 💚
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COSAS QUE ME RECUERDAN A TI
+========================= -->
+
+<section
+    class="seccion aparecer"
+    id="cosas"
+    style="display:none;"
+>
+
+    <div class="contenido">
+
+        <div class="tarjeta">
+
+            <h2>
+                Cosas que me recuerdan a ti ❤️
+            </h2>
+
+            <p>
+                Hay pequeños detalles que, sin importar dónde esté o qué esté haciendo,
+                pueden hacer que piense inmediatamente en ti.
+            </p>
+
+        </div>
+
+
+        <!-- GATO -->
+
+        <div class="tarjeta">
+
+            <img
+                src="Gato negro 2.png"
+                alt="Gato negro"
+                class="imagen-recuerdo"
+            >
+
+            <h2>
+                🐈‍⬛ El gato negro
+            </h2>
+
+            <p>
+                Porque sé que los gatos son de tus animales favoritos,
+                y cada vez que veo uno no puedo evitar pensar en ti.
+            </p>
+
+            <br>
+
+            <p>
+                Y especialmente los gatos negros tienen algo que me hace recordarte:
+                esa combinación entre misterio, personalidad y ternura que simplemente me hace pensar en ti.
+            </p>
+
+        </div>
+
+
+        <!-- TULIPANES -->
+
+        <div class="tarjeta">
+
+            <img
+                src="tulipanes 2.png"
+                alt="Tulipanes"
+                class="imagen-recuerdo"
+            >
+
+            <h2>
+                🌷 Los tulipanes
+            </h2>
+
+            <p>
+                Son tus flores favoritas, así que era imposible hacer algo para ti
+                sin que aparecieran por alguna parte.
+            </p>
+
+            <br>
+
+            <p>
+                Para mí representan algo bonito y especial,
+                porque ahora cada vez que veo tulipanes inevitablemente pienso en ti.
+            </p>
+
+        </div>
+
+
+        <!-- COLORES -->
+
+        <div class="tarjeta">
+
+            <h2>
+                🖤💚💙 Tus colores
+            </h2>
+
+            <p>
+                También están esos tres colores que automáticamente me hacen pensar en ti.
+            </p>
+
+            <div class="colores">
+
+                <div class="color negro">
+
+                    <div class="circulo-color"></div>
+
+                    <strong>Negro 🖤</strong>
+
+                    <span>
+                        Tu lado fuerte, elegante y con personalidad.
+                    </span>
+
+                </div>
+
+
+                <div class="color verde">
+
+                    <div class="circulo-color"></div>
+
+                    <strong>Verde 💚</strong>
+
+                    <span>
+                        Ese color que siempre me recuerda a algo tranquilo y bonito.
+                    </span>
+
+                </div>
+
+
+                <div class="color azul">
+
+                    <div class="circulo-color"></div>
+
+                    <strong>Azul 💙</strong>
+
+                    <span>
+                        Un color que simplemente terminó formando parte de las cosas que asocio contigo.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PEQUEÑOS RECUERDOS
+        ========================= -->
+
+        <div class="tarjeta">
+
+            <h2 class="recuerdos-titulo">
+                Pequeños recuerdos ✨
+            </h2>
+
+            <p class="recuerdos-subtitulo">
+                Porque no todo lo importante tiene que ser algo enorme.
+                A veces son las pequeñas cosas las que más terminamos guardando.
+            </p>
+
+
+            <!-- RECUERDO 1 -->
+
+            <div class="recuerdo">
+
+                <div class="recuerdo-icono">
+                    😂
+                </div>
+
+                <h3>
+                    Nuestras tonterías
+                </h3>
+
+                <p>
+                    Me acuerdo de todas esas veces en las que terminábamos
+                    riéndonos por cualquier bobada.
+                    Son momentos sencillos, pero contigo siempre terminaban siendo especiales.
+                </p>
+
+            </div>
+
+
+            <!-- RECUERDO 2 -->
+
+            <div class="recuerdo">
+
+                <div class="recuerdo-icono">
+                    💬
+                </div>
+
+                <h3>
+                    Conversaciones sin sentido
+                </h3>
+
+                <p>
+                    Podíamos empezar hablando de cualquier cosa y terminar
+                    hablando durante muchísimo tiempo.
+                    Me encanta recordar esas conversaciones que simplemente se daban.
+                </p>
+
+            </div>
+
+
+            <!-- RECUERDO 3 -->
+
+            <div class="recuerdo">
+
+                <div class="recuerdo-icono">
+                    ✍️
+                </div>
+
+                <h3>
+                    Mis errores a propósito
+                </h3>
+
+                <p>
+                    Hasta escribir mal a propósito se convirtió en una pequeña
+                    forma de hacerte reír.
+                    Puede parecer una bobada, pero a mí me encantaba cuando conseguía sacarte una sonrisa.
+                </p>
+
+            </div>
+
+
+            <!-- RECUERDO 4 -->
+
+            <div class="recuerdo">
+
+                <div class="recuerdo-icono">
+                    ❤️
+                </div>
+
+                <h3>
+                    Volver a encontrarnos
+                </h3>
+
+                <p>
+                    Después de todo lo que pasó, poder volver a hablar contigo
+                    significó muchísimo para mí.
+                    Fue bonito volver a tener esas conversaciones y sentir que estabas nuevamente cerca.
+                </p>
+
+            </div>
+
+
+            <!-- RECUERDO 5 -->
+
+            <div class="recuerdo">
+
+                <div class="recuerdo-icono">
+                    🥺
+                </div>
+
+                <h3>
+                    Los pequeños momentos
+                </h3>
+
+                <p>
+                    Aprendí que no siempre hacen falta grandes cosas para guardar
+                    un recuerdo con cariño.
+                    A veces basta una conversación, una risa o una pequeña tontería contigo.
+                </p>
+
+            </div>
+
+
+            <!-- RECUERDO 6 -->
+
+            <div class="recuerdo">
+
+                <div class="recuerdo-icono">
+                    🌷
+                </div>
+
+                <h3>
+                    Tú
+                </h3>
+
+                <p>
+                    De todos esos recuerdos, creo que lo que más valoro es simplemente
+                    haberlos vivido contigo.
+                    Porque eres tú quien hace que esos pequeños momentos tengan un significado especial para mí.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL
+        ========================= -->
+
+        <div class="tarjeta final">
+
+            <div class="corazones">
+                ❤️ 🌷 🐈‍⬛ 🌷 ❤️
+            </div>
+
+            <h2>
+                Y todavía hay algo más...
+            </h2>
+
+            <p>
+                Espero que este pequeño espacio te recuerde lo especial que eres para mí
+                y que puedas sonreír cada vez que lo veas.
+            </p>
+
+            <br>
+
+            <p>
+                Gracias por existir y por formar parte de mi vida, Karol. ❤️
+            </p>
+
+            <br>
+
+            <p>
+                Feliz cumpleaños, mi amor. 🥺❤️🌷
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   ABRIR SORPRESA
+========================= */
+
+function abrirSorpresa(){
+
+    document.getElementById("portada").style.display="none";
+
+    document.getElementById("carta").style.display="flex";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   MOSTRAR COSAS
+========================= */
+
+function mostrarCosas(){
+
+    document.getElementById("carta").style.display="none";
+
+    document.getElementById("cosas").style.display="flex";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
